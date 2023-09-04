@@ -7,24 +7,30 @@ let offset = 0;
 function convertPokemonToLi(pokemon) {
   return `
     <li class="pokemon ${pokemon.types[0]}">
-      <div class="poke-header">
-         <span class="number">#${pokemon.number}</span>
-         <span class="name">${pokemon.name}</span>
-      </div>
-    <div class="details">
-        <ol class="types">
-            ${pokemon.types
-              .map((type) => `<li class="type ${type}">${type}</li>`)
-              .join("")}
-        </ol>
+      <ol class="types">
+        ${pokemon.types
+          .map(
+            (type) => `<li class="type">
+          <img src="./assets/img/icons/${type}.svg" alt="${type} icon type">
+            </li>`
+          )
+          .join("")}
+      </ol>
+
+      <div class="pokemon-image">
         <img src="${pokemon.photo}" alt="${pokemon.name}">
-    </div>
+      </div>
+
+      <div class="poke-text">
+        <span class="name">${pokemon.name}</span>
+        <span class="number">#${pokemon.number}</span>
+      </div>
   </li>`;
 }
 
 function HandleLoadMore(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join(""); // usar no site da fipe
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join("");
   });
 }
 
