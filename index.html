@@ -15,18 +15,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
+    <div class="home">
+        <header class="header">
+            <div class="logo"><img src="./assets/img/photos/pokedex-logo.svg" alt="Pokédex Logo"></div>
+        </header>
 
+        <section class="intro">
+            <div class="pokemon-shadow">
+                <img src="./assets/img/photos/pikachu-shadow.png" alt="pikachu silhouette">
+                <div class="circle"></div>
+            </div>
+            <div class="text">
+                <img src="./assets/img/photos/who-pokemon.png" alt="Who's that Pokémon">
+                <p>Descubra esse e vários outros pokémons logo abaixo</p>
+            </div>
+    </div>
+    <section class="type-filter">
+        <div class="filter-text">
+            <h2>Esta é uma lista com todas as gerações de pokémons da atualidade.</h2>
+            <p>Você pode navegar por cada tipo usando os filtros abaixo.</p>
+        </div>
+        <ul>
+            <li>
+                <img class="active" src="./assets/img/icons/all.svg" alt="all icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/normal.svg" alt="normal icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/grass.svg" alt="grass icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/fire.svg" alt="fire icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/water.svg" alt="water icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/electric.svg" alt="electric icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/ice.svg" alt="ice icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/ground.svg" alt="ground icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/flying.svg" alt="flying icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/poison.svg" alt="poison icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/fighting.svg" alt="fighting icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/psychic.svg" alt="psychic icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/dark.svg" alt="dark icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/rock.svg" alt="rock icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/bug.svg" alt="bug icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/ghost.svg" alt="ghost icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/steel.svg" alt="steel icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/dragon.svg" alt="dragon icon type">
+            </li>
+            <li>
+                <img src="./assets/img/icons/fairy.svg" alt="fairy icon type">
+            </li>
+        </ul>
+    </section>
+
+    <section class="content">
+
+        <h1>Pokedex</h1>
         <ol id="pokemons-list" class="pokemons-list">
             <!-- pokemon list here -->
-
-
+            <li class="pokemon grass">
+                <ol class="types">
+                    <li class="type">
+                        <img src="./assets/img/icons/grass.svg" alt="grass icon type">
+                    </li>
+                    <li class="type">
+                        <img src="./assets/img/icons/poison.svg" alt="poison icon type">
+                    </li>
+                </ol>
+                <div class="pokemon-image">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasaur">
+                </div>
+                <div class="poke-text">
+                    <span class="name">bulbasaur</span>
+                    <span class="number">#1</span>
+                </div>
             </li>
-        </ol>
+
     </section>
     <div class="pagination">
         <button class="loadMore" type="button">Load More</button>

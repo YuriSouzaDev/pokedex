@@ -1,12 +1,144 @@
 @import "pokedex.css";
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
 body {
   background: #f6f8fc;
+}
+
+ul,
+ol {
+  list-style: none;
+  list-style: none;
+}
+
+img {
+  display: block;
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100vh;
+}
+
+.header {
+  height: 12%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #ee383d;
+  position: relative;
+}
+
+.header img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, calc(-25% + 0.625rem));
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 200px;
+  height: 88%;
+  background: linear-gradient(#ee383d 70%, #f6f8fc 70%);
+  position: relative;
+  z-index: -1;
+}
+
+.pokemon-shadow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
+  right: 50%;
+  transform: translate(50%, -100%);
+  z-index: 1;
+}
+
+.pokemon-shadow img {
+  width: 400px;
+}
+
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 50%;
+  top: 100px;
+  z-index: -2;
+  animation: circle 1s infinite forwards;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(1.4);
+  }
+  40% {
+    transform: scale(1.6);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.8);
+  }
+  60% {
+    transform: scale(2);
+  }
+  70% {
+    opacity: 0.4;
+    transform: scale(2.2);
+  }
+  80% {
+    transform: scale(2.4);
+  }
+  90% {
+    opacity: 0.2;
+    transform: scale(2.6);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(2.8);
+  }
+}
+
+.intro .text {
+  padding-top: 40px;
+  z-index: 2;
+  text-align: center;
+  margin-top: 320px;
+}
+
+.intro .text p {
+  color: #000;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.intro .text img {
+  max-width: 1000px;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -23,5 +155,9 @@ body {
     height: auto;
     margin: 0 auto;
     border-radius: 1rem;
+  }
+
+  .type-filter {
+    max-width: 1200px;
   }
 }
