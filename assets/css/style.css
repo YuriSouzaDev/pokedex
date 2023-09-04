@@ -20,7 +20,7 @@ ol {
 
 img {
   display: block;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .home {
