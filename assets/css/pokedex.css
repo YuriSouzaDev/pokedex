@@ -41,10 +41,11 @@
   height: 40px;
   cursor: pointer;
   filter: grayscale(1);
+  transition: 0.3s;
 }
 
 .type-filter li img.active {
-  filter: grayscale(0);
+  filter: none;
 }
 
 .pokemons-list {
